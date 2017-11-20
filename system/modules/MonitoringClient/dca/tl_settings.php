@@ -78,7 +78,7 @@ class tl_settings_MonitoringClient extends Backend
    */
   public function getClientApiUrl($varValue, DataContainer $dc)
   {
-    return \Environment::get('base')."system/modules/MonitoringClient/api";
+    return \Environment::get('base')."system/modules/MonitoringClient/api/api.php";
   }
 
   /**

@@ -8,8 +8,9 @@
  * @license LGPL-3.0+
  */
 
-// Initialize the system
-define('TL_MODE', 'BE');
+// Needed for Contao 4
+define('TL_SCRIPT', ""); 
+ // Initialize the system
 require dirname(__DIR__) . '../../../../system/initialize.php';
 
 // Get the data

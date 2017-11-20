@@ -28,6 +28,8 @@ Compatibility
 -------------
 
 - Contao version >= 3.5.0 ... <  3.6.0
+- Contao version >= 4.4.0
+
 
 Dependency
 ----------
