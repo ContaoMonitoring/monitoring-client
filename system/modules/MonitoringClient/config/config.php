@@ -30,6 +30,6 @@
 /**
  * Global variables
  */
-define('MONITORING_CLIENT_VERSION', '1.0.0');
+define('MONITORING_CLIENT_VERSION', '1.1.0');
 
 ?>
