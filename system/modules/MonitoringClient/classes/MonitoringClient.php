@@ -61,12 +61,13 @@ class MonitoringClient extends \Backend
       return json_encode(array("error"=>"TOKEN_INVALID"));
     }
     
-    // maybe later we will also check the user agent `$_SERVER['HTTP_USER_AGENT']`
-    
     $arrData = array();
+    $arrData['monitoring.client.version'] = MONITORING_CLIENT_VERSION;
+    $arrData['monitoring.server.agent']   = $_SERVER['HTTP_USER_AGENT'];
     
     if (isset($GLOBALS['TL_HOOKS']['monitoringClientDataRead']) && is_array($GLOBALS['TL_HOOKS']['monitoringClientDataRead']))
     {
+      $arrData['monitoring.client.sensors'] = implode(", ", array_keys($GLOBALS['TL_HOOKS']['monitoringClientDataRead']));
       foreach ($GLOBALS['TL_HOOKS']['monitoringClientDataRead'] as $callback)
       {
         $this->import($callback[0]);
