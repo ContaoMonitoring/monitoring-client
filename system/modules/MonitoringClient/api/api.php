@@ -13,6 +13,7 @@ if (file_exists(dirname(__DIR__) . '/../../../../../../system/initialize.php'))
 {
   // Contao 4 environment
   define('TL_SCRIPT', ""); // Only needed for Contao 4
+  define('TL_MODE', ""); // Only needed for Contao 4.5
   require dirname(__DIR__) . '/../../../../../../system/initialize.php';
 }
 else
@@ -23,5 +24,3 @@ else
 // Get the data
 $client = new MonitoringClient();
 echo $client->getData();
-
-?>
