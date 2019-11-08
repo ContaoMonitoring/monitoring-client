@@ -2,6 +2,10 @@
 Contao Extension "MonitoringClient"
 ===================================
 
+Version 1.1.1 (2019-11-08)
+--------------------------
+- Fixes seeting missing `TL_MODE` for Contao 4.5+ (see #5, #6)
+
 Version 1.1.0 (2017-11-23)
 --------------------------
 - Sending MonitoringClient version, available sensors and server agent name

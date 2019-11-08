@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2017 Leo Feyer
+ * Copyright (C) 2005-2019 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2017-2017
+ * @copyright  Cliff Parnitzky 2017-2019
  * @author     Cliff Parnitzky
  * @package    MonitoringClient
  * @license    LGPL
@@ -30,6 +30,6 @@
 /**
  * Global variables
  */
-define('MONITORING_CLIENT_VERSION', '1.1.0');
+define('MONITORING_CLIENT_VERSION', '1.1.1');
 
 ?>
