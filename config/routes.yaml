@@ -1,0 +1,3 @@
+contao_monitoring.controller:
+    resource: ../src/Controller
+    type: annotation

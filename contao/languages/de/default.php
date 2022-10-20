@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2017 Leo Feyer
+ * Copyright (C) 2005-2022 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2017-2017
+ * @copyright  Cliff Parnitzky 2017-2022
  * @author     Cliff Parnitzky
  * @package    MonitoringClientScan
  * @license    LGPL
@@ -32,5 +32,3 @@
  */
 $GLOBALS['TL_LANG']['ERR']['monitoringClientScan']['FAILED']        = 'Es können keine Daten aus vom MonitoringClient dieses überwachten Systems gelesen werden.';
 $GLOBALS['TL_LANG']['ERR']['monitoringClientScan']['TOKEN_INVALID'] = 'Die Authentifizierung ist fehlgeschlagen, weil das Token ungültig war.';
-
-?>
