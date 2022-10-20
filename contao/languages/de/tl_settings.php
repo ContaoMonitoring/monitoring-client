@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2019 Leo Feyer
+ * Copyright (C) 2005-2022 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,15 +21,19 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2017-2019
+ * @copyright  Cliff Parnitzky 2017-2022
  * @author     Cliff Parnitzky
  * @package    MonitoringClient
  * @license    LGPL
  */
- 
-/**
- * Global variables
- */
-define('MONITORING_CLIENT_VERSION', '1.1.1');
 
-?>
+/**
+ * Fields
+ */
+$GLOBALS['TL_LANG']['tl_settings']['monitoringClientApiUrl'] = array('MonitoringClient API URL', 'Die Adresse zur API des MonitoringClient auf diesem System.');
+$GLOBALS['TL_LANG']['tl_settings']['monitoringClientToken']  = array('MonitoringClient Token', 'Das Token des MonitoringClient zur Authentifizierung der Datenabfrage.');
+
+/**
+ * Legends
+ */
+$GLOBALS['TL_LANG']['tl_settings']['monitoringClient_legend'] = 'MonitoringClient Konfiguration';

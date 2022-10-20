@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2017 Leo Feyer
+ * Copyright (C) 2005-2022 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,11 +21,16 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2017-2017
+ * @copyright  Cliff Parnitzky 2017-2022
  * @author     Cliff Parnitzky
  * @package    MonitoringClient
  * @license    LGPL
  */
+
+use Contao\Backend;
+use Contao\Config;
+use Contao\DataContainer;
+use Contao\Environment;
 
 /**
  * Add to palette
@@ -35,18 +40,16 @@ $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';{monitoringClient_
 /**
  * Add fields
  */
-$GLOBALS['TL_DCA']['tl_settings']['fields']['monitoringClientApiUrl'] = array
-(
+$GLOBALS['TL_DCA']['tl_settings']['fields']['monitoringClientApiUrl'] = array(
   'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['monitoringClientApiUrl'],
   'inputType'               => 'text',
-  'eval'                    => array('readonly'=>true, 'tl_class'=>'clr long'),
+  'eval'                    => array('readonly' => true, 'tl_class' => 'clr long'),
   'load_callback'           => array(array('tl_settings_MonitoringClient', 'getClientApiUrl'))
 );
-$GLOBALS['TL_DCA']['tl_settings']['fields']['monitoringClientToken'] = array
-(
+$GLOBALS['TL_DCA']['tl_settings']['fields']['monitoringClientToken'] = array(
   'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['monitoringClientToken'],
   'inputType'               => 'text',
-  'eval'                    => array('readonly'=>true, 'mandatory'=>true, 'tl_class'=>'clr w50'),
+  'eval'                    => array('readonly' => true, 'mandatory' => true, 'tl_class' => 'clr w50'),
   'load_callback'           => array(array('tl_settings_MonitoringClient', 'generateToken'))
 );
 
@@ -55,7 +58,7 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['monitoringClientToken'] = array
  *
  * Provide miscellaneous methods that are used by the data configuration array.
  * PHP version 5
- * @copyright  Cliff Parnitzky 2017-2017
+ * @copyright  Cliff Parnitzky 2017-2022
  * @author     Cliff Parnitzky
  * @package    Controller
  */
@@ -78,7 +81,7 @@ class tl_settings_MonitoringClient extends Backend
    */
   public function getClientApiUrl($varValue, DataContainer $dc)
   {
-    return \Environment::get('base')."system/modules/MonitoringClient/api/api.php";
+    return Environment::get('base') . "_monitoring/api";
   }
 
   /**
@@ -92,10 +95,8 @@ class tl_settings_MonitoringClient extends Backend
     if (strlen($varValue) == 0)
     {
       $varValue = md5(uniqid(mt_rand(), true));
-      \Config::persist('monitoringClientToken', $varValue);
+      Config::persist('monitoringClientToken', $varValue);
     }
     return $varValue;
   }
 }
-
-?>

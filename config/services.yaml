@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    ContaoMonitoring\Controller\:
+        resource: ../src/Controller
+        exclude: ../src/{ContentElement,FrontendModule}
+        tags: ['controller.service_arguments']
