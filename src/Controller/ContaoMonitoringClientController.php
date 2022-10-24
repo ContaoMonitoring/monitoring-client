@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @license LGPL-3.0-or-later
  */
 
-namespace ContaoMonitoring\Controller;
+namespace ContaoMonitoring\ContaoMonitoringClient\Controller;
 
 use Contao\Config;
 use Contao\Input;
@@ -35,19 +35,19 @@ class ContaoMonitoringClientController
             return $response;
         }
 
+        $arrData = array();
+        $arrData['monitoring.client.version'] = MONITORING_CLIENT_VERSION;
+        $arrData['monitoring.server.agent']   = $_SERVER['HTTP_USER_AGENT'];
+
         if (isset($GLOBALS['TL_HOOKS']['monitoringClientDataRead']) && is_array($GLOBALS['TL_HOOKS']['monitoringClientDataRead']))
         {
             $arrData['monitoring.client.sensors'] = implode(", ", array_keys($GLOBALS['TL_HOOKS']['monitoringClientDataRead']));
             foreach ($GLOBALS['TL_HOOKS']['monitoringClientDataRead'] as $callback)
             {
                 $objCallback = System::importStatic($callback[0]);
-                $arrData = $objCallback->{$callback[0]}->{$callback[1]}($arrData);
+                $arrData = $objCallback->{$callback[1]}($arrData);
             }
         }
-
-        $arrData = array();
-        $arrData['monitoring.client.version'] = MONITORING_CLIENT_VERSION;
-        $arrData['monitoring.server.agent']   = $_SERVER['HTTP_USER_AGENT'];
 
         $response = new JsonResponse();
         $response->setData($arrData);

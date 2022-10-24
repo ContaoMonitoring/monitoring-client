@@ -22,11 +22,11 @@
     },
     "autoload": {
         "psr-4": {
-            "ContaoMonitoring\\": "src/"
+            "ContaoMonitoring\\ContaoMonitoringClient\\": "src/"
         }
     },
     "extra": {
-        "contao-manager-plugin": "ContaoMonitoring\\ContaoManager\\Plugin",
+        "contao-manager-plugin": "ContaoMonitoring\\ContaoMonitoringClient\\ContaoManager\\Plugin",
         "branch-alias": {
             "dev-master": "2.0.x-dev"
         }

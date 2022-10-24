@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @license LGPL-3.0-or-later
  */
 
-namespace ContaoMonitoring\DependencyInjection;
+namespace ContaoMonitoring\ContaoMonitoringClient\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

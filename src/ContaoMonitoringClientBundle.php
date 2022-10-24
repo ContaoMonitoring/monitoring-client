@@ -6,11 +6,11 @@ declare(strict_types=1);
  * @license LGPL-3.0-or-later
  */
 
-namespace ContaoMonitoring;
+namespace ContaoMonitoring\ContaoMonitoringClient;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class ContaoMonitoringBundle extends Bundle
+class ContaoMonitoringClientBundle extends Bundle
 {
     public function getPath(): string
     {

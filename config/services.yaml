@@ -3,7 +3,7 @@ services:
         autowire: true
         autoconfigure: true
 
-    ContaoMonitoring\Controller\:
+    ContaoMonitoring\ContaoMonitoringClient\Controller\:
         resource: ../src/Controller
         exclude: ../src/{ContentElement,FrontendModule}
         tags: ['controller.service_arguments']
