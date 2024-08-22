@@ -2,7 +2,7 @@
     "name": "contao-monitoring/monitoring-client",
     "description": "The MonitoringClient provides data of the monitored system to a Contao Monitoring Server.",
     "type": "contao-bundle",
-    "homepage": "https://github.com/inspiredminds/contao-content-templates",
+    "homepage": "https://github.com/ContaoMonitoring",
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
